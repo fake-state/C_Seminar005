@@ -9,9 +9,9 @@ int Number() // Длинна массива
     return Number;
 }
 
-void FillArray(int[] array, int NumberOfEllements)
+void FillArray(int[] array)
 {
-    for (int i = 0; i < NumberOfEllements; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(100, 1000);
     }
@@ -27,7 +27,6 @@ int Count(int[] array)
     return count;
 }
 
-int N = Number();
-int[] array = new int[N];
-FillArray(array, N);
+int[] array = new int[Number()];
+FillArray(array);
 Console.WriteLine($"Количество чётных чисел в массиве: {Count(array)}");
